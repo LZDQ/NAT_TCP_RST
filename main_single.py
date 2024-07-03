@@ -70,7 +70,8 @@ def packet_callback(packet):
         })
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Check whether the router has this vulnerability on a single machine")
+    parser = argparse.ArgumentParser(description="Check whether the router has this vulnerability on a single machine",
+                                     add_help=True)
     parser.add_argument("--server-addr", type=str, help="Server address. Please setup a nc listening on the server.")
     parser.add_argument("--server-port", type=int, help="Server nc port. Please setup a nc listening on the server.")
     parser.add_argument("--victim-port", type=int, help="(Optional) client port to bind to.")
